@@ -87,4 +87,20 @@ void main() {
       SplayTreeMap<String, String>.from(numberBook, (b, a) => a.compareTo(b));
 
   print(sortedBack); // d
+
+  // 10
+  Set mySet = {'Москва', 'Вашингтон', 'Париж'}; // a
+
+  mySet.add('Вашингтон');
+  print(mySet
+      .length); // b - will output 3 as added 'Вашингтон' is not unique, so no change in mySet values (as Set containing only unique ones)
+
+  var rows = 'She sells sea shells on the sea shore'.split(' ');
+  rows.addAll('The shells that she sells are sea shells I am sure'.split(' '));
+  rows.addAll('So if she sells sea shells on the sea shore'.split(' '));
+  rows.addAll('I am sure that the shells are sea shore shells'.split(' '));
+
+  Set lirics = rows.toSet();
+  print(lirics);
+  print(lirics.length); // c
 }
