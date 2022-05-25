@@ -25,8 +25,32 @@ void printAllOdds(int _max) {
   }
 }
 
-// 3
-void sumOrStop() {}
+void sumOrStop() {
+  var num1 = 0.0;
+  var num2 = 0.0;
+  var input = '';
+  final stopWord = 'stop';
+
+  do {
+    try {
+      print('Введите первое число для сложения:');
+      input = (stdin.readLineSync()).toString();
+      num1 = double.parse(input);
+      print('Введите второе число для сложения:');
+      input = (stdin.readLineSync()).toString();
+      num2 = double.parse(input);
+      print(num1 + num2);
+    } on Exception {
+      if (input != stopWord) {
+        print(
+            'Введены некорректные значения, попробуйте еще раз. Для выхода - введите ${stopWord}');
+      }
+      num1 = 0.0;
+      num2 = 0.0;
+      continue;
+    }
+  } while (input != stopWord);
+}
 
 void main() {
   print('Введите номер месяца: ');
