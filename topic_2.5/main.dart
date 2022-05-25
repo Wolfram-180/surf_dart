@@ -19,7 +19,7 @@ var months = [
 // 2
 void printAllOdds(int _max) {
   for (var i = 0; i < _max + 1; i++) {
-    if (i % 2 == 0) {
+    if (i.isEven) {
       print(i);
     }
   }
