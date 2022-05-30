@@ -9,7 +9,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "topic_2_6/main.dart"
+            "program": "topic_2_task_6/main.dart"
         }
     ]
 }
