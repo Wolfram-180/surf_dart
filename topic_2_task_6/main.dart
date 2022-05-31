@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Stack<E> {
   Stack() : _stack = <E>[];
   final List<E> _stack;
@@ -12,6 +14,7 @@ class Stack<E> {
 
 var a = 'hello world';
 var b = '1 2 3 4 5';
+var seed = Random();
 
 // 1, 3
 void restackWords([String _str = '']) {
@@ -21,19 +24,33 @@ void restackWords([String _str = '']) {
   print(_str);
 }
 
-double average(List nums) {
+// 2
+double lstAvrg([nums = 0]) {
+  var msv = [];
   double sum = 0;
-  for (int i = 0; i < nums.length; i++) {
-    sum += nums[i];
+
+  for (var i = 0; i < nums; i++) {
+    msv.add(seed.nextInt(100));
+  }
+  print('массив: ${msv}');
+
+  for (var i = 0; i < msv.length; i++) {
+    sum += msv[i];
   }
 
-  return sum / nums.length;
+  return nums > 0 ? sum / msv.length : 0;
 }
 
 void main() {
+  print('1, 3:');
   print(a);
-  restackWords(a); // 1, 3
-  restackWords(); // 1, 3
+  restackWords(a);
+  restackWords();
   print(b);
-  restackWords(b); // 1, 3
+  restackWords(b);
+
+  print('\n2, 3:');
+  // массив чисел с произвольным размером
+  print('среднее арифметическое число массива: ${lstAvrg(seed.nextInt(100))}');
+  print('среднее арифметическое число массива: ${lstAvrg()}');
 }
