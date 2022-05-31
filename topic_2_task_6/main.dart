@@ -13,17 +13,27 @@ class Stack<E> {
 var a = 'hello world';
 var b = '1 2 3 4 5';
 
-// 1
-void restackWords(_str) {
+// 1, 3
+void restackWords([String _str = '']) {
   final stack = Stack<String>();
   _str.split(' ').forEach((element) => stack.push(element));
   _str = stack.toString();
   print(_str);
 }
 
+double average(List nums) {
+  double sum = 0;
+  for (int i = 0; i < nums.length; i++) {
+    sum += nums[i];
+  }
+
+  return sum / nums.length;
+}
+
 void main() {
   print(a);
-  restackWords(a); // 1
+  restackWords(a); // 1, 3
+  restackWords(); // 1, 3
   print(b);
-  restackWords(b); // 1
+  restackWords(b); // 1, 3
 }
