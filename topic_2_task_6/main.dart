@@ -43,8 +43,21 @@ double lstAvrg([nums = 0]) {
 
 // 4
 String findEquationResult(double a, double b, double c) {
-  double findDiscr(double a, double b, double c) => b*b - 4*a*c;
-  double findRoot(double a, double b, double discrRoot) => (-b + discrRoot) / (2*a);
+  double findDiscr(double a, double b, double c) {
+    try {
+      return b * b - 4 * a * c;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  double findRoot(double a, double b, double discrRoot) {
+    try {
+      return (-b + discrRoot) / (2 * a);
+    } catch (e) {
+      return 0;
+    }
+  }
 
   final discr = findDiscr(a, b, c);
   if (discr < 0) {
