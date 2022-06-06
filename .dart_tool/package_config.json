@@ -1,0 +1,32 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "clock",
+      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/clock-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "surf_flutter_course",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
+    }
+  ],
+  "generated": "2022-06-06T09:23:37.236160Z",
+  "generator": "pub",
+  "generatorVersion": "2.16.2"
+}
