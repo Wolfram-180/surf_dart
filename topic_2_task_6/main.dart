@@ -41,6 +41,37 @@ double lstAvrg([nums = 0]) {
   return nums > 0 ? sum / msv.length : 0;
 }
 
+// 4
+String findEquationResult(double a, double b, double c) {
+  double findDiscr(double a, double b, double c) {
+    try {
+      return b * b - 4 * a * c;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  double findRoot(double a, double b, double discrRoot) {
+    try {
+      return (-b + discrRoot) / (2 * a);
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  final discr = findDiscr(a, b, c);
+  if (discr < 0) {
+    return 'У уравнения нет корней т.к. его дискриминант меньше нуля';
+  }
+
+  final discrSqrRoot = sqrt(discr);
+  if (discr == 0) {
+    return 'У уравнения есть один корень: x= ${findRoot(a, b, discrSqrRoot)}';
+  }
+
+  return 'У уравнения есть два разных корня: x1= ${findRoot(a, b, discrSqrRoot)}, x2= ${findRoot(a, b, -discrSqrRoot)}';
+}
+
 void main() {
   print('1, 3:');
   print(a);
@@ -53,4 +84,10 @@ void main() {
   // массив чисел с произвольным размером
   print('среднее арифметическое число массива: ${lstAvrg(seed.nextInt(100))}');
   print('среднее арифметическое число массива: ${lstAvrg()}');
+
+  print('\n4:');
+  print(findEquationResult(8, 9, -3));
+  print(findEquationResult(2, 7, 3));
+  print(findEquationResult(-12, 24, 36));
+  print(findEquationResult(12, 24, 36));
 }
