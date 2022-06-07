@@ -53,7 +53,7 @@ class User {
   final String lastName;
   final DateTime birthDay;
 
-  User({this.firstName, this.lastName, this.birthDay});
+  const User({this.firstName, this.lastName, this.birthDay});
 
   @override
   String toString() {
