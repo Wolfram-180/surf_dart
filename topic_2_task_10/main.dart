@@ -2,6 +2,7 @@ import 'package:intl/intl.dart';
 
 void main() {
   // 1
+  print('=== 1 ===');
   Student std1 = Student(
       firstName: 'Ivan',
       lastName: 'Petrov',
@@ -10,8 +11,9 @@ void main() {
   print(std1);
 
   // 2
-  Truck truck = Truck();
-  SportCar sportCar = SportCar();
+  print('=== 2 ===');
+  Truck truck = Truck(enginePower: 150);
+  SportCar sportCar = SportCar(enginePower: 250);
   Bike bike = Bike();
 
   print(truck);
@@ -21,7 +23,14 @@ void main() {
   truck.run();
   sportCar.run();
 
+  print('\n=== 3 ===');
+
   // 3
+  final numValToString = AnythingToString<num>();
+  print(numValToString.anythingToString(99.9));
+
+  final dTToString = AnythingToString<DateTime>();
+  print(dTToString.anythingToString(DateTime.now()));
 }
 
 // 1
@@ -31,10 +40,10 @@ class Student extends User {
   int get currentCourse => DateTime.now().year - yearOfAdmission.year;
 
   Student({
-    String firstName,
-    String lastName,
-    DateTime birthDay,
-    this.yearOfAdmission,
+    required String firstName,
+    required String lastName,
+    required DateTime birthDay,
+    required this.yearOfAdmission,
   }) : super(firstName: firstName, lastName: lastName, birthDay: birthDay);
 
   @override
@@ -53,7 +62,10 @@ class User {
   final String lastName;
   final DateTime birthDay;
 
-  const User({this.firstName, this.lastName, this.birthDay});
+  const User(
+      {required this.firstName,
+      required this.lastName,
+      required this.birthDay});
 
   @override
   String toString() {
@@ -70,43 +82,40 @@ class User {
 enum Colors { red, green, blue }
 
 abstract class Car {
-  double weight;
+  final num weight = 0;
+  final num enginePower = 0;
   void run();
 }
 
 class Truck extends Car with Painter, Engine {
-  @override
   double get weight => 10;
+  late final num enginePower;
 
-  @override
   void run() {
     runEngine();
   }
 
-  @override
   String toString() {
     return 'Грузовик $colorName цвета';
   }
 
-  Truck() {
+  Truck({required this.enginePower}) {
     setColor(Colors.red);
   }
 }
 
 class SportCar extends Car with Painter, Engine {
-  @override
   double get weight => 2;
+  late final num enginePower;
 
-  @override
   String toString() {
     return 'Спорткар $colorName цвета';
   }
 
-  SportCar() {
+  SportCar({required this.enginePower}) {
     setColor(Colors.blue);
   }
 
-  @override
   void run() {
     runEngine();
   }
@@ -124,7 +133,7 @@ class Bike with Painter {
 }
 
 mixin Painter {
-  String colorName;
+  String? colorName;
   void setColor(Colors color) {
     switch (color) {
       case Colors.red:
@@ -147,9 +156,14 @@ mixin Painter {
 }
 
 mixin Engine on Car {
-  int enginePower = 143;
+  late final num enginePower;
   void runEngine() {
     print(
         'Двигатель работает. Максимальная скорость = $enginePower / $weight = ${enginePower / weight}');
   }
+}
+
+// 3
+class AnythingToString<T> {
+  String anythingToString(T value) => value.toString();
 }

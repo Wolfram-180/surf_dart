@@ -23,10 +23,10 @@
       "name": "surf_flutter_course",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.10"
+      "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-06-06T09:23:37.236160Z",
+  "generated": "2022-06-07T07:53:35.496439Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
