@@ -3,19 +3,19 @@
   "packages": [
     {
       "name": "clock",
-      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/clock-1.1.0",
+      "rootUri": "file:///C:/Users/sergey.ulvis/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "intl",
-      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "rootUri": "file:///C:/Users/sergey.ulvis/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/usrg1_000/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.2",
+      "rootUri": "file:///C:/Users/sergey.ulvis/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -26,7 +26,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-06-07T07:53:35.496439Z",
+  "generated": "2022-06-10T10:13:01.852170Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
