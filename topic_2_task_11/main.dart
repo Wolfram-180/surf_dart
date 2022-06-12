@@ -26,8 +26,8 @@ Future<String?> getKbInputHurry({int sec = 5}) async {
 }
 
 Future<void> main() async {
-  var name = getKbInput();
+  var name = await getKbInput();
   print(' Привет, $name');
-  name = getKbInputHurry();
+  name = await getKbInputHurry();
   print(' Привет, $name');
 }
