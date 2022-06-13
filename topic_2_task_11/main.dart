@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -18,7 +19,8 @@ Future<void> main() async {
     }
   });
 
-  // Stream 1 - 3
+  // Stream 1 - 2
+  var listener = readKb().listen(processKb);
 }
 
 // Future 1 - 3
@@ -52,4 +54,16 @@ Future<List> getDartList() async {
     List<String> dartList = dart.split('');
     return dartList;
   });
+}
+
+// Stream 1 - 2
+
+Stream<String> readKb() =>
+    stdin.transform(utf8.decoder).transform(const LineSplitter());
+
+void processKb(String str) {
+  print(str);
+  if (str == 'exit') {
+    listener.cancel();
+  }
 }
