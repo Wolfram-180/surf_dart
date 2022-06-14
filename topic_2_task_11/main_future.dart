@@ -2,6 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+/**
+    Используя Future
+    Напишите функцию, которая считывает данные с клавиатуры. Функция должна возвращать Future.
+    Напишите код, который дожидается выполнения функции и распечатывает на консоль "Введена строка stroke_name".
+    Поэкспериментируйте с async/await и then
+ */
+
 void main() async {
   // Future 1 - 3
   var name = await getKbInput();
