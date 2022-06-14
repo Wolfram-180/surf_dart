@@ -64,6 +64,6 @@ Stream<String> readKb() =>
 void processKb(String str) {
   print(str);
   if (str == 'exit') {
-    listener.cancel();
+    //listener.cancel();
   }
 }
