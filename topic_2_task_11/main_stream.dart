@@ -9,7 +9,7 @@ import 'dart:io';
  */
 
 void main() async {
-  print('Введите что-нибудь, пожалуйста (exit для выхода): ');
+  print('Введите что-нибудь, пожалуйста (exit для выхода):');
   readLnFromKb().listen(checkVal);
 }
 
