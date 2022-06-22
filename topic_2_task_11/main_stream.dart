@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+// working on statistics...
+
 /**
     Используя Stream
     Напишите функцию, которая считывает данные с клавиатуры до тех пор, пока не будет введен строка "exit". Функция должна возвращать Stream.
