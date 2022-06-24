@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-// working on statistics...
+// still working on statistics...
 
 /**
     Используя Stream
